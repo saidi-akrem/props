@@ -1,23 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Child from './profile/Child';
 function App() {
+  const fullName= "  Saidi Akrem";
+  const bio=" My experience covers multiple technologies and solutions.";
+  const profession="Polyvalent IT Engineer";
+  const style ={
+  color:"bleu" ,
+  backgroundColor: "aquamarine",
+textAlign:'center',
+margin:'30mm',
+marginLeft:'100mm',
+marginRight:'100mm',
+borderRaduis:'20mm',
+border:'5px solidblack',
+display:"grid",
+flexDirection:"column"
+
+
+  
+  
+
+} ;
+ 
+  const handleName=()=>{
+    alert("Sure are you AKrem?? ")
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Child fullName={fullName}
+       bio={bio}
+        profession={profession}   
+        alert={handleName} style={style}/>
     </div>
   );
 }
